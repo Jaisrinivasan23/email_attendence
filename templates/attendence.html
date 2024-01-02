@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance</title>
+    <link rel="stylesheet" href="/templates/style.css">
+    <style>
+        /* Reset default styles */
+        body, h1, h2, h3, h4, h5, h6, p, input, button, select, textarea {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            box-sizing: border-box;
+        }
+
+        /* Style the container */
+        .container {
+            width: 80%;
+            margin: 20px auto;
+        }
+
+        /* Style the header */
+        .head {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Style the form */
+        .attendance-form {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Style the input fields */
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .input-group input[type="text"] {
+            width: calc(100% - 12px); 
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        
+        input[type="submit"] {
+            border: 1px solid #0026ff;
+            background: #007bff;
+            padding: 10px;
+            color: #f8f1f1;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+
+        input[type="submit"]:hover {
+            background: white;
+            color: rgb(15, 62, 205);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3 class="head">Absenties RollNo</h3>
+        <form action="/send_email" method="post" class="attendance-form">
+            <div class="input-group">
+                <label for="aia">AI&DS-A:</label>
+                <input type="text" name="aia">
+            </div>
+            <div class="input-group">
+                <label for="aib">AI&DS-B:</label>
+                <input type="text" name="aib">
+            </div>
+            <div class="input-group">
+                <label for="eca">ECE-A:</label>
+                <input type="text" name="eca">
+            </div>
+            <div class="input-group">
+                <label for="ecb">ECE-B:</label>
+                <input type="text" name="ecb">
+            </div>
+            <div class="input-group">
+                <label for="csa">CSE-A:</label>
+                <input type="text" name="csa">
+            </div>
+            <div class="input-group">
+                <label for="csb">CSE-B:</label>
+                <input type="text" name="csb">
+            </div>
+            <div class="input-group">
+                <label for="it">IT:</label>
+                <input type="text" name="it">
+            </div>
+            <div class="input-group">
+                <label for="cb">CSBS:</label>
+                <input type="text" name="cb">
+            </div>
+            <div class="input-group">
+                <label for="me">MECH:</label>
+                <input type="text" name="me">
+            </div>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
